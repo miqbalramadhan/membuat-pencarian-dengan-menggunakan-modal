@@ -1,26 +1,25 @@
 
 <html>
    <head>
-      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-      <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css" />
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
       <script type="text/javascript">
-         $(document).ready(function() {
-  //focusin berfungsi ketika cursor berada di dalam textbox modal langsung aktif
-  $(".pencarian").focusin(function() {
-    $("#myModal").modal('show'); // ini fungsi untuk menampilkan modal
-  });
-  $('#example').DataTable(); // fungsi ini untuk memanggil datatable
-});
-
-// function in berfungsi untuk memindahkan data kolom yang di klik menuju text box
-function masuk(txt, data) {
-  document.getElementById('textbox').value = data; // ini berfungsi mengisi value  yang ber id textbox
-  $("#myModal").modal('hide'); // ini berfungsi untuk menyembunyikan modal
-}
+      $(document).ready(function() {
+        //focusin berfungsi ketika cursor berada di dalam textbox modal langsung aktif
+        $(".pencarian").focusin(function() {
+          $("#myModal").modal('show'); // ini fungsi untuk menampilkan modal
+        });
+        $('#example').DataTable(); // fungsi ini untuk memanggil datatable
+      });
+      // function in berfungsi untuk memindahkan data kolom yang di klik menuju text box
+      function masuk(txt, data) {
+        document.getElementById('textbox').value = data; // ini berfungsi mengisi value  yang ber id textbox
+        $("#myModal").modal('hide'); // ini berfungsi untuk menyembunyikan modal
+      }
       </script>
    </head>
    <body>
